@@ -1,0 +1,30 @@
+gitbash로 github 연동하기
+
+1. 원하는 폴더로 가서 우클릭 후 Git Bash Here 클릭
+
+2. git config --global user.name "Kyoung-Man"
+   git config --global user.email baekkyoungman@daum.net
+   사용자의 계정이름과 이메일을 밝힌다.
+
+3. git init
+   로컬 저장소 생성
+
+4. git status
+   빨간색 글씨 뜨는 것을 Untracked 파일이라고 하는데 밑에 add 명령어로 넣어주면 된다. 
+   
+   git add "빨간색 글씨 파일명" → 바람직한 add는 딱 한번만 실행하는 것이다.
+   
+   git add -A
+   경로 내에 있는 모든 파일을 더한다.
+
+5. git commit -m "옵션명"
+   -m 뒤에 옵션명은 본인의 임의대로 해도 된다. ex) git commit -m "20190626"
+
+6. git remote add origin https://github.com/Kyoung-Man/javascriptTest.git
+   올리고자하는 파일들의 주소를 지정하는 단계이다. 
+   주소는 본인 github에 생성한 Repositories에 들어가면 [Clone or download]를 누르면 URL을 가져오면 된다.(https를 이용)
+
+7. git push origin master 또는 git push -f origin master
+   (error: failed to push some refs to 발생시 강제진행)
+
+8. 이후 github에 들어가서 확인하면 된다.
